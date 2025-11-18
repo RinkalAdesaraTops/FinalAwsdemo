@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/RinkalAdesaraTops/NodejsAwsDemo.git'
+                git url: 'https://github.com/RinkalAdesaraTops/FinalAwsdemo.git'
             }
         }
 
@@ -19,7 +19,7 @@ pipeline {
                 sh '''
                     docker stop node-container || true
                     docker rm node-container || true
-                    docker run -d -p 3000:3000 --name node-container nodejs-app
+                    docker run -d -p 5000:5000 --name node-container nodejs-app
                 '''
             }
         }
